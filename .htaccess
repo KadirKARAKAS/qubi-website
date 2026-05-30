@@ -31,7 +31,21 @@ RewriteRule ^privacy-policy/?$ /wondertale/privacy-policy [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+terms[\s/?] [NC]
 RewriteRule ^terms/?$ /wondertale/terms [R=301,L]
 
+# ── Redirect raw .html URLs to clean URLs (301 permanent) — Lumo ──────
+RewriteCond %{THE_REQUEST} \s/+lumo\.html[\s?] [NC]
+RewriteRule ^lumo\.html$ /lumo [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+lumo-privacy\.html[\s?] [NC]
+RewriteRule ^lumo-privacy\.html$ /lumo/privacy-policy [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+lumo-terms\.html[\s?] [NC]
+RewriteRule ^lumo-terms\.html$ /lumo/terms [R=301,L]
+
 # ── Clean URL routes (internal rewrite to real files) ─────────────────
+RewriteRule ^lumo/?$ lumo.html [L]
+RewriteRule ^lumo/privacy-policy/?$ lumo-privacy.html [L]
+RewriteRule ^lumo/terms/?$ lumo-terms.html [L]
+
 RewriteRule ^apps/?$ apps.html [L]
 RewriteRule ^about/?$ about.html [L]
 RewriteRule ^support/?$ support.html [L]
