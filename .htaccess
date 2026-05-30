@@ -1,0 +1,41 @@
+RewriteEngine On
+
+DirectoryIndex index.html
+
+# ── Redirect raw .html URLs to clean URLs (301 permanent) ─────────────
+RewriteCond %{THE_REQUEST} \s/+apps\.html[\s?] [NC]
+RewriteRule ^apps\.html$ /apps [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+about\.html[\s?] [NC]
+RewriteRule ^about\.html$ /about [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+support\.html[\s?] [NC]
+RewriteRule ^support\.html$ /support [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+contact\.html[\s?] [NC]
+RewriteRule ^contact\.html$ /contact [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+wondertale\.html[\s?] [NC]
+RewriteRule ^wondertale\.html$ /wondertale [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+wondertale-privacy\.html[\s?] [NC]
+RewriteRule ^wondertale-privacy\.html$ /wondertale/privacy-policy [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+wondertale-terms\.html[\s?] [NC]
+RewriteRule ^wondertale-terms\.html$ /wondertale/terms [R=301,L]
+
+# ── Redirect old site-wide legal URLs to the WonderTale-scoped ones ──
+RewriteCond %{THE_REQUEST} \s/+privacy-policy[\s/?] [NC]
+RewriteRule ^privacy-policy/?$ /wondertale/privacy-policy [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+terms[\s/?] [NC]
+RewriteRule ^terms/?$ /wondertale/terms [R=301,L]
+
+# ── Clean URL routes (internal rewrite to real files) ─────────────────
+RewriteRule ^apps/?$ apps.html [L]
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^support/?$ support.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^wondertale/?$ wondertale.html [L]
+RewriteRule ^wondertale/privacy-policy/?$ wondertale-privacy.html [L]
+RewriteRule ^wondertale/terms/?$ wondertale-terms.html [L]
