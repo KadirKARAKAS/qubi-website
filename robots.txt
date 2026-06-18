@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qubi.com/sitemap.xml

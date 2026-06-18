@@ -31,6 +31,7 @@ ROUTES = {
     "/wondertale":                  "/wondertale.html",
     "/wondertale/privacy-policy":   "/wondertale-privacy.html",
     "/wondertale/terms":            "/wondertale-terms.html",
+    "/purl":                        "/purl/index.html",
 }
 
 # 301 redirects: legacy paths → current clean URL.
