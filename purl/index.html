@@ -1302,6 +1302,119 @@
       to{opacity:1;transform:translateY(0)}
     }
 
+    /* ── Support / Contact ── */
+    .support{
+      padding:120px 0;
+      background:var(--surface);
+      border-top:1px solid rgba(240,232,216,.09);
+    }
+    .support-inner{
+      width:var(--container);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:80px;
+      align-items:start;
+    }
+    .support-left{position:sticky;top:120px}
+    .support-left h2{
+      margin:14px 0 0;
+      font-family:var(--serif);
+      font-size:clamp(40px,5vw,68px);
+      font-style:italic;
+      line-height:.9;
+      letter-spacing:-.05em;
+    }
+    .support-left p{
+      margin:18px 0 0;
+      color:var(--cream2);
+      font-size:17px;
+      line-height:1.55;
+      max-width:380px;
+    }
+    .support-info{
+      margin-top:30px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .support-info-row{
+      display:flex;align-items:center;gap:12px;
+      font-size:14px;font-weight:800;color:var(--cream2);
+    }
+    .support-info-row::before{
+      content:"";width:7px;height:7px;border-radius:50%;
+      background:var(--amber);box-shadow:0 0 12px var(--amber);
+      flex-shrink:0;
+    }
+
+    .support-form-card{
+      background:var(--deep);
+      border:1px solid rgba(240,232,216,.08);
+      padding:44px 42px;
+    }
+    .support-field{margin-bottom:20px}
+    .support-field label{
+      display:block;
+      font-size:11px;font-weight:900;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--muted);
+      margin-bottom:8px;
+    }
+    .support-field input,
+    .support-field select,
+    .support-field textarea{
+      width:100%;
+      background:rgba(240,232,216,.04);
+      border:1px solid rgba(240,232,216,.1);
+      color:var(--cream);
+      font-family:var(--body);
+      font-size:15px;
+      padding:13px 16px;
+      outline:none;
+      transition:border-color .2s;
+      -webkit-appearance:none;
+      border-radius:0;
+    }
+    .support-field input::placeholder,
+    .support-field textarea::placeholder{color:rgba(240,232,216,.28)}
+    .support-field input:focus,
+    .support-field select:focus,
+    .support-field textarea:focus{border-color:var(--amber)}
+    .support-field textarea{min-height:130px;resize:vertical;line-height:1.6}
+    .support-field select{
+      cursor:pointer;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%237a9280' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 16px center;
+      background-color:rgba(240,232,216,.04);
+      padding-right:40px;
+    }
+    .support-field select option{background:#142019;color:var(--cream)}
+    .support-submit{
+      width:100%;padding:16px 24px;
+      background:var(--cream);color:var(--deep);
+      font-family:var(--body);font-size:15px;font-weight:900;
+      border:none;cursor:pointer;letter-spacing:.04em;
+      transition:opacity .2s,transform .15s;
+      position:relative;overflow:hidden;
+    }
+    .support-submit:hover{opacity:.9}
+    .support-submit:active{transform:scale(.98)}
+    .support-submit:disabled{opacity:.5;cursor:not-allowed}
+    .support-msg{
+      padding:14px 18px;margin-bottom:20px;
+      font-size:14px;font-weight:700;
+      border-left:3px solid;display:none;
+    }
+    .support-msg.success{
+      background:rgba(122,146,128,.1);border-color:var(--muted);
+      color:var(--cream2);display:block;
+    }
+    .support-msg.error{
+      background:rgba(200,80,80,.08);border-color:#c85050;
+      color:rgba(240,180,180,.85);display:block;
+    }
+
     @media(max-width:1024px){
       .hero-title{width:82vw}
       .hero-phone{right:-14vw;opacity:.78}
@@ -1315,6 +1428,8 @@
       .testimonials-grid{grid-template-columns:1fr 1fr}
       .faq-inner{grid-template-columns:1fr;gap:48px}
       .faq-left{position:static}
+      .support-inner{grid-template-columns:1fr;gap:48px}
+      .support-left{position:static}
     }
 
     @media(max-width:768px){
@@ -1356,6 +1471,10 @@
       .testimonials-grid{grid-template-columns:1fr;width:calc(100% - 28px)}
       .faq{padding:80px 0}
       .faq-inner{width:calc(100% - 28px)}
+      .support{padding:80px 0}
+      .support-inner{width:calc(100% - 28px)}
+      .support-form-card{padding:32px 22px}
+      .support-form-card .name-email-row{flex-direction:column;gap:0}
       .footer-inner{flex-direction:column;align-items:flex-start}
     }
 
@@ -1389,6 +1508,7 @@
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="#pricing">Pricing</a>
+        <a href="#support">Support</a>
       </nav>
 
       <a class="app-btn magnetic" href="#" aria-label="Download Purl on the App Store">
@@ -1407,6 +1527,7 @@
     <a href="#reviews">Reviews</a>
     <a href="#faq">FAQ</a>
     <a href="#pricing">Pricing</a>
+    <a href="#support">Support</a>
     <a href="#">App Store</a>
   </nav>
 
@@ -1620,6 +1741,57 @@
             <summary class="faq-q">Does Purl support amigurumi crochet projects?</summary>
             <p class="faq-a">Yes. Purl tracks amigurumi by individual parts — head, body, arms, legs — each with its own round counter, materials list and notes. Import the crochet diagram as a PDF, track each component separately and attach progress photos as you build.</p>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support" aria-label="Contact support">
+      <div class="support-inner">
+        <div class="support-left">
+          <span class="section-kicker">Get in touch</span>
+          <h2>We're here<br>to help.</h2>
+          <p>Have a question about Purl? Found a bug? We read every message and aim to reply within 24–48 hours.</p>
+          <div class="support-info">
+            <div class="support-info-row">Typically replies within 24–48 hours</div>
+            <div class="support-info-row">Email: <a href="mailto:info@qubillc.com" style="color:var(--amber)">info@qubillc.com</a></div>
+            <div class="support-info-row">iOS 16 or later · iPhone &amp; iPad</div>
+          </div>
+        </div>
+
+        <div class="support-form-card">
+          <div class="support-msg" id="support-success">✓ Message sent — we'll get back to you soon.</div>
+          <div class="support-msg" id="support-error">Something went wrong. Please email us directly at info@qubillc.com</div>
+
+          <form id="support-form" novalidate>
+            <div class="name-email-row" style="display:flex;gap:16px">
+              <div class="support-field" style="flex:1">
+                <label for="s-name">Name</label>
+                <input type="text" id="s-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+              </div>
+              <div class="support-field" style="flex:1">
+                <label for="s-email">Email</label>
+                <input type="email" id="s-email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="support-field">
+              <label for="s-subject">Topic</label>
+              <select id="s-subject" name="subject" required>
+                <option value="" disabled selected>Select a topic…</option>
+                <option value="General Question">General Question</option>
+                <option value="Bug Report">Bug Report</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Purchase & Billing">Purchase &amp; Billing</option>
+                <option value="Privacy / Data Request">Privacy / Data Request</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="support-field">
+              <label for="s-message">Message</label>
+              <textarea id="s-message" name="message" placeholder="Describe your question or issue…" required></textarea>
+            </div>
+            <div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" /></div>
+            <button type="submit" class="support-submit" id="support-btn">Send Message</button>
+          </form>
         </div>
       </div>
     </section>
@@ -1894,6 +2066,42 @@ document.querySelectorAll(".magnetic").forEach((btn) => {
     }else{
       initPurlLanding();
     }
+
+    // Support form — AJAX submit
+    (function(){
+      const form = document.getElementById('support-form');
+      if(!form) return;
+      const btn     = document.getElementById('support-btn');
+      const msgOk   = document.getElementById('support-success');
+      const msgErr  = document.getElementById('support-error');
+
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        msgOk.style.display = 'none';
+        msgErr.style.display = 'none';
+
+        try {
+          const res  = await fetch('/purl/contact.php', {
+            method: 'POST',
+            body:   new FormData(form),
+            headers: {'X-Requested-With': 'XMLHttpRequest'}
+          });
+          const data = await res.json();
+          if(data.success){
+            form.style.display = 'none';
+            msgOk.classList.add('success');
+          } else {
+            throw new Error(data.error || 'fail');
+          }
+        } catch(err){
+          btn.disabled    = false;
+          btn.textContent = 'Send Message';
+          msgErr.classList.add('error');
+        }
+      });
+    })();
   </script>
 </body>
 </html>

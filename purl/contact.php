@@ -2,32 +2,40 @@
 // Purl support form handler
 // Sends form submissions to info@qubillc.com
 
+$isAjax = isset($_SERVER['HTTP_X_REQUESTED_WITH'])
+       && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+
+function jsonOut(bool $success, string $error = ''): void {
+    header('Content-Type: application/json; charset=UTF-8');
+    echo json_encode($success ? ['success' => true] : ['success' => false, 'error' => $error]);
+    exit;
+}
+
+function redirectOut(string $location): void {
+    header('Location: ' . $location);
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: /purl/support');
-    exit;
+    redirectOut('/purl/support');
 }
 
-// Honeypot check — bots fill hidden fields, humans don't
+// Honeypot — bots fill hidden fields, humans don't
 if (!empty($_POST['website'])) {
-    header('Location: /purl/support?sent=1');
-    exit;
+    $isAjax ? jsonOut(true) : redirectOut('/purl/support?sent=1');
 }
 
-// Sanitize inputs
 $name    = trim($_POST['name']    ?? '');
 $email   = trim($_POST['email']   ?? '');
 $subject = trim($_POST['subject'] ?? '');
 $message = trim($_POST['message'] ?? '');
 
-// Basic validation
 if (empty($name) || empty($email) || empty($subject) || empty($message)) {
-    header('Location: /purl/support?error=validation');
-    exit;
+    $isAjax ? jsonOut(false, 'validation') : redirectOut('/purl/support?error=validation');
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header('Location: /purl/support?error=email');
-    exit;
+    $isAjax ? jsonOut(false, 'email') : redirectOut('/purl/support?error=email');
 }
 
 // Sanitize for email headers (prevent header injection)
@@ -49,7 +57,7 @@ Message:
 {$message}
 
 ---
-Sent via qubi.com/purl/support
+Sent via qubi.com/purl
 EOT;
 
 $headers  = "From: Purl Support <noreply@qubi.com>\r\n";
@@ -58,8 +66,7 @@ $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
 if (mail($to, $mailSubject, $body, $headers)) {
-    header('Location: /purl/support?sent=1');
+    $isAjax ? jsonOut(true) : redirectOut('/purl/support?sent=1');
 } else {
-    header('Location: /purl/support?error=mail');
+    $isAjax ? jsonOut(false, 'mail') : redirectOut('/purl/support?error=mail');
 }
-exit;
