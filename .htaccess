@@ -46,6 +46,10 @@ RewriteRule ^lumo/?$ lumo.html [L]
 RewriteRule ^lumo/privacy-policy/?$ lumo-privacy.html [L]
 RewriteRule ^lumo/terms/?$ lumo-terms.html [L]
 
+RewriteRule ^purl/support/?$ purl/support.html [L]
+RewriteRule ^purl/privacy/?$ purl/privacy.html [L]
+RewriteRule ^purl/terms/?$ purl/terms.html [L]
+
 RewriteRule ^apps/?$ apps.html [L]
 RewriteRule ^about/?$ about.html [L]
 RewriteRule ^support/?$ support.html [L]
