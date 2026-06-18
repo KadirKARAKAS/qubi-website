@@ -1,0 +1,201 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Purl home" [ref=e4]:
+        - /url: "#top"
+        - img "Purl app icon" [ref=e5]
+        - generic [ref=e6]:
+          - strong [ref=e7]: Purl
+          - generic [ref=e8]: Pattern Keeper
+      - navigation "Main navigation" [ref=e9]:
+        - link "Features" [ref=e10]:
+          - /url: "#features"
+        - link "Pricing" [ref=e11]:
+          - /url: "#pricing"
+        - link "Languages" [ref=e12]:
+          - /url: "#languages"
+      - link "Download Purl on the App Store" [ref=e13]:
+        - /url: "#"
+        - generic [ref=e14]: 
+        - generic [ref=e15]:
+          - generic [ref=e16]: Download on the
+          - generic [ref=e17]: App Store
+  - navigation "Mobile navigation" [ref=e18]:
+    - link "Features" [ref=e19]:
+      - /url: "#features"
+    - link "Pricing" [ref=e20]:
+      - /url: "#pricing"
+    - link "Languages" [ref=e21]:
+      - /url: "#languages"
+    - link "App Store" [ref=e22]:
+      - /url: "#"
+  - main [ref=e23]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - generic [ref=e27]: For cross-stitch, knitting and crochet
+        - heading "One app for all your patterns." [level=1] [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e30]: O
+            - generic [ref=e31]: "n"
+            - generic [ref=e32]: e
+          - generic [ref=e33]:
+            - generic [ref=e34]: a
+            - generic [ref=e35]: p
+            - generic [ref=e36]: p
+          - generic [ref=e37]:
+            - generic [ref=e38]: f
+            - generic [ref=e39]: o
+            - generic [ref=e40]: r
+          - generic [ref=e41]:
+            - generic [ref=e42]: a
+            - generic [ref=e43]: l
+            - generic [ref=e44]: l
+          - generic [ref=e45]:
+            - generic [ref=e46]: "y"
+            - generic [ref=e47]: o
+            - generic [ref=e48]: u
+            - generic [ref=e49]: r
+          - generic [ref=e50]:
+            - generic [ref=e51]: p
+            - generic [ref=e52]: a
+            - generic [ref=e53]: t
+            - generic [ref=e54]: t
+            - generic [ref=e55]: e
+            - generic [ref=e56]: r
+            - generic [ref=e57]: "n"
+            - generic [ref=e58]: s
+            - generic [ref=e59]: .
+        - paragraph [ref=e60]: Track cross-stitch, knitting and crochet together in one dramatic, tactile workspace. Import PDFs, mark progress, organize threads and keep everything synced.
+        - generic [ref=e61]:
+          - link "Download Purl on the App Store" [ref=e62]:
+            - /url: "#"
+            - generic [ref=e63]: 
+            - generic [ref=e64]:
+              - generic [ref=e65]: Download on the
+              - generic [ref=e66]: App Store
+          - link "See features" [ref=e67]:
+            - /url: "#features"
+      - img "Purl home screen on iPhone" [ref=e72]
+      - generic [ref=e73]: iCloud synced
+      - generic [ref=e74]: 67% complete
+    - region "Purl highlights" [ref=e79]:
+      - generic [ref=e80]:
+        - generic [ref=e81]: Import PDFs ✦
+        - generic [ref=e82]: Track every stitch ✦
+        - generic [ref=e83]: Organize threads ✦
+        - generic [ref=e84]: Save progress photos ✦
+        - generic [ref=e85]: Sync with iCloud ✦
+        - generic [ref=e86]: Pay once ✦
+        - generic [ref=e87]: Import PDFs ✦
+        - generic [ref=e88]: Track every stitch ✦
+        - generic [ref=e89]: Organize threads ✦
+        - generic [ref=e90]: Save progress photos ✦
+        - generic [ref=e91]: Sync with iCloud ✦
+        - generic [ref=e92]: Pay once ✦
+    - generic [ref=e93]:
+      - article [ref=e94]:
+        - img "Purl stitch tracking grid" [ref=e99]
+        - generic [ref=e100]:
+          - generic: "01"
+          - generic [ref=e101]:
+            - generic [ref=e102]: Stitch tracking
+            - heading "Never lose your place again" [level=2] [ref=e103]
+            - paragraph [ref=e104]: Import PDF patterns, mark each stitch and follow your row progress with a visual tracker built for careful makers.
+            - list [ref=e105]:
+              - listitem [ref=e106]: Row and stitch progress
+              - listitem [ref=e107]: Visual pattern tracking
+              - listitem [ref=e108]: Progress saved as you go
+      - article [ref=e109]:
+        - img "Purl thread stash with DMC colors" [ref=e114]
+        - generic [ref=e115]:
+          - generic: "02"
+          - generic [ref=e116]:
+            - generic [ref=e117]: Thread stash
+            - heading "Your colors, finally organized" [level=2] [ref=e118]
+            - paragraph [ref=e119]: Track DMC and Anchor colors, stock levels and what you need next before you begin a new pattern.
+            - list [ref=e120]:
+              - listitem [ref=e121]: DMC and Anchor inventory
+              - listitem [ref=e122]: Barcode scanner
+              - listitem [ref=e123]: Low stock visibility
+      - article [ref=e124]:
+        - img "Purl progress photos timeline" [ref=e129]
+        - generic [ref=e130]:
+          - generic: "03"
+          - generic [ref=e131]:
+            - generic [ref=e132]: Photo journal
+            - heading "Watch your project grow" [level=2] [ref=e133]
+            - paragraph [ref=e134]: Save dated progress photos and look back on every quiet milestone, from the first stitch to the finished piece.
+            - list [ref=e135]:
+              - listitem [ref=e136]: Dated project photos
+              - listitem [ref=e137]: Milestone timeline
+              - listitem [ref=e138]: Perfect for long projects
+      - article [ref=e139]:
+        - img "Purl iCloud sync settings" [ref=e144]
+        - generic [ref=e145]:
+          - generic: "04"
+          - generic [ref=e146]:
+            - generic [ref=e147]: iCloud sync
+            - heading "Start on iPhone, continue on iPad" [level=2] [ref=e148]
+            - paragraph [ref=e149]: Your patterns, threads and project progress stay updated across your devices with private iCloud sync.
+            - list [ref=e150]:
+              - listitem [ref=e151]: iPhone and iPad support
+              - listitem [ref=e152]: Private iCloud sync
+              - listitem [ref=e153]: Continue from anywhere
+    - region "Purl stats" [ref=e154]:
+      - generic [ref=e155]:
+        - generic [ref=e156]:
+          - generic [ref=e157]: "0"
+          - generic [ref=e158]: Languages
+        - generic [ref=e159]:
+          - generic [ref=e160]: "0"
+          - generic [ref=e161]: Crafts
+        - generic [ref=e162]:
+          - generic [ref=e163]: $0
+          - generic [ref=e164]: Forever
+    - generic [ref=e166]:
+      - generic [ref=e167]:
+        - heading "Pay once, stitch forever." [level=2] [ref=e168]
+        - paragraph [ref=e169]: Start with a 30-day free trial. Then keep Purl with one fair lifetime price. No monthly plans. No surprises.
+        - generic [ref=e170]:
+          - generic [ref=e171]: 30-day free trial
+          - generic [ref=e172]: One-time payment
+          - generic [ref=e173]: Future updates included
+          - generic [ref=e174]: iPhone + iPad
+      - generic "$9.99 lifetime" [ref=e175]:
+        - generic [ref=e176]:
+          - generic [ref=e177]: Lifetime
+          - strong [ref=e178]: $9.99
+          - text: one-time
+    - generic [ref=e180]:
+      - generic [ref=e181]:
+        - generic [ref=e182]:
+          - heading "More than cross-stitch." [level=2] [ref=e183]
+          - paragraph [ref=e184]: Cross-stitch, knitting and crochet — with support in 12 languages for makers around the world.
+        - generic "Supported languages" [ref=e185]:
+          - generic [ref=e186]: English
+          - generic [ref=e187]: Deutsch
+          - generic [ref=e188]: Français
+          - generic [ref=e189]: Español
+          - generic [ref=e190]: Italiano
+          - generic [ref=e191]: Türkçe
+          - generic [ref=e192]: Português
+          - generic [ref=e193]: Nederlands
+          - generic [ref=e194]: 日本語
+          - generic [ref=e195]: 한국어
+          - generic [ref=e196]: 中文
+          - generic [ref=e197]: Polski
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - heading "Bring every pattern into one place." [level=2] [ref=e200]
+          - paragraph [ref=e201]: Import your PDF, pick your craft and begin tracking in minutes.
+        - link "Download Purl on the App Store" [ref=e202]:
+          - /url: "#"
+          - generic [ref=e203]: 
+          - generic [ref=e204]:
+            - generic [ref=e205]: Download on the
+            - generic [ref=e206]: App Store
+  - contentinfo [ref=e207]:
+    - generic [ref=e208]:
+      - generic [ref=e209]: Purl is made by Qubi LLC © 2026
+      - link "Privacy Policy" [ref=e210]:
+        - /url: /purl/privacy
