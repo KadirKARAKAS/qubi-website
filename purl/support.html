@@ -293,7 +293,10 @@
       })();
     </script>
 
-    <form action="/purl/contact.php" method="POST">
+    <form id="support-form" novalidate>
+      <input type="hidden" name="access_key" value="75e706e6-6c1b-401c-b490-4a2b2af341be" />
+      <input type="hidden" name="from_name" value="Purl Support Form" />
+
       <div class="field">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
@@ -322,13 +325,38 @@
         <textarea id="message" name="message" placeholder="Describe your issue or question in as much detail as possible…" required></textarea>
       </div>
 
-      <!-- Honeypot — do not fill -->
       <div style="display:none" aria-hidden="true">
-        <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        <input type="checkbox" name="botcheck" tabindex="-1" />
       </div>
 
-      <button type="submit" class="submit-btn">Send Message</button>
+      <button type="submit" class="submit-btn" id="support-btn">Send Message</button>
     </form>
+
+    <script>
+      (function(){
+        var form = document.getElementById('support-form');
+        var btn  = document.getElementById('support-btn');
+        var ok   = document.getElementById('msg-success');
+        var err  = document.getElementById('msg-error');
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          if(!form.checkValidity()){ form.reportValidity(); return; }
+          btn.disabled = true; btn.textContent = 'Sending…';
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST', body: new FormData(form)
+          })
+          .then(function(r){ return r.json(); })
+          .then(function(d){
+            form.style.display = 'none';
+            ok.style.display = 'block';
+          })
+          .catch(function(){
+            btn.disabled = false; btn.textContent = 'Send Message';
+            err.style.display = 'block';
+          });
+        });
+      })();
+    </script>
   </div>
 
   <!-- Sidebar -->

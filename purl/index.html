@@ -1784,7 +1784,9 @@
               <label for="s-message">Message</label>
               <textarea id="s-message" name="message" placeholder="Describe your question or issue…" required></textarea>
             </div>
-            <div style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" /></div>
+            <input type="hidden" name="access_key" value="75e706e6-6c1b-401c-b490-4a2b2af341be" />
+            <input type="hidden" name="from_name" value="Purl Support Form" />
+            <div style="display:none" aria-hidden="true"><input type="text" name="botcheck" tabindex="-1" /></div>
             <button type="submit" class="support-submit" id="support-btn">Send Message</button>
           </form>
         </div>
@@ -2077,17 +2079,20 @@ document.querySelectorAll(".magnetic").forEach((btn) => {
         btn.disabled = true;
         btn.textContent = 'Sending…';
 
-        // Fire-and-forget — show success after short delay regardless of mail server response
-        fetch('/purl/contact.php', {
+        fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          body:   new FormData(form),
-          headers: {'X-Requested-With': 'XMLHttpRequest'}
-        }).catch(function(){});
-
-        setTimeout(function(){
-          form.style.display  = 'none';
+          body:   new FormData(form)
+        })
+        .then(function(res){ return res.json(); })
+        .then(function(data){
+          form.style.display = 'none';
           msgOk.classList.add('success');
-        }, 800);
+        })
+        .catch(function(){
+          btn.disabled    = false;
+          btn.textContent = 'Send Message';
+          msgErr.classList.add('error');
+        });
       });
     })();
   </script>
