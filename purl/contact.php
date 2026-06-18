@@ -60,7 +60,7 @@ Message:
 Sent via qubi.com/purl
 EOT;
 
-$headers  = "From: Purl Support <noreply@qubi.com>\r\n";
+$headers  = "From: Purl Support <info@qubillc.com>\r\n";
 $headers .= "Reply-To: {$name} <{$email}>\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();

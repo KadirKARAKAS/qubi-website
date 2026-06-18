@@ -7,6 +7,7 @@
   <meta name="description" content="Get help with Purl – Pattern Keeper. Contact Qubi LLC for support, bug reports, or feature requests." />
   <link rel="canonical" href="https://qubi.com/purl/support" />
   <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="/purl/assets/purl-icon.png" />
   <link rel="apple-touch-icon" href="/purl/assets/purl-icon.png" />
   <meta name="theme-color" content="#0c1a10" />
 
@@ -278,15 +279,19 @@
   <div class="form-card">
     <h2>Send us a message</h2>
 
-    <?php if (isset($_GET['sent']) && $_GET['sent'] == '1'): ?>
-    <div class="alert alert-success">
-      ✓ Message sent. We'll get back to you within 24–48 hours.
+    <div class="alert alert-success" id="msg-success" style="display:none">
+      ✓ Your message has been sent! We'll get back to you within 24–48 hours.
     </div>
-    <?php elseif (isset($_GET['error'])): ?>
-    <div class="alert alert-error">
-      Something went wrong. Please try again or email us directly at info@qubillc.com
+    <div class="alert alert-error" id="msg-error" style="display:none">
+      Something went wrong. Please try again or email us directly at <a href="mailto:info@qubillc.com">info@qubillc.com</a>
     </div>
-    <?php endif; ?>
+    <script>
+      (function(){
+        var p = new URLSearchParams(window.location.search);
+        if(p.get('sent') === '1'){ document.getElementById('msg-success').style.display='block'; }
+        else if(p.get('error'))  { document.getElementById('msg-error').style.display='block';   }
+      })();
+    </script>
 
     <form action="/purl/contact.php" method="POST">
       <div class="field">
