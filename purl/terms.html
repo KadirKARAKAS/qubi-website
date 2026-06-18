@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use – Purl Pattern Keeper</title>
+  <meta name="description" content="Terms of Use for Purl – Pattern Keeper. Read the terms that govern your use of the Purl iOS app." />
+  <link rel="canonical" href="https://qubi.com/purl/terms" />
+  <meta name="robots" content="index, follow" />
+  <link rel="apple-touch-icon" href="/purl/assets/purl-icon.png" />
+  <meta name="theme-color" content="#0c1a10" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#0c1a10;
+      --deep:#07110a;
+      --surface:#142019;
+      --cream:#f0e8d8;
+      --cream2:rgba(240,232,216,.72);
+      --amber:#c8880a;
+      --muted:#7a9280;
+      --line:rgba(240,232,216,.1);
+      --serif:"Playfair Display",Georgia,serif;
+      --body:"DM Sans",system-ui,sans-serif;
+      --container:min(100% - 52px,780px);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{background:var(--bg)}
+    body{font-family:var(--body);color:var(--cream);background:var(--bg);min-height:100vh}
+    a{color:var(--amber);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .nav{
+      position:sticky;top:0;z-index:50;
+      padding:20px 0;
+      background:rgba(12,26,16,.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      width:var(--container);margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream)}
+    .brand img{width:36px;height:36px;border-radius:10px}
+    .brand strong{font-family:var(--serif);font-size:22px;letter-spacing:-.04em}
+    .back-link{
+      font-size:13px;font-weight:800;color:var(--muted);
+      display:inline-flex;align-items:center;gap:8px;transition:color .2s;
+    }
+    .back-link:hover{color:var(--cream);text-decoration:none}
+    .back-link::before{content:"←"}
+
+    .page-header{padding:64px 0 48px;border-bottom:1px solid var(--line)}
+    .page-header-inner{width:var(--container);margin:0 auto}
+    .page-kicker{
+      font-size:11px;font-weight:900;letter-spacing:.22em;
+      text-transform:uppercase;color:var(--amber);
+      display:block;margin-bottom:16px;
+    }
+    .page-title{
+      font-family:var(--serif);
+      font-size:clamp(36px,5vw,56px);
+      font-style:italic;line-height:.92;letter-spacing:-.04em;
+    }
+    .page-meta{margin-top:18px;color:var(--muted);font-size:14px;font-weight:700}
+
+    .legal-content{width:var(--container);margin:0 auto;padding:56px 0 100px}
+    .legal-section{margin-bottom:52px;padding-bottom:52px;border-bottom:1px solid var(--line)}
+    .legal-section:last-child{border-bottom:none;margin-bottom:0}
+    .legal-section h2{
+      font-family:var(--serif);
+      font-size:clamp(20px,2vw,26px);
+      font-style:italic;letter-spacing:-.03em;
+      margin-bottom:18px;color:var(--cream);
+    }
+    .legal-section h3{
+      font-size:14px;font-weight:900;letter-spacing:.08em;
+      text-transform:uppercase;color:var(--amber);margin:24px 0 10px;
+    }
+    .legal-section p{color:var(--cream2);font-size:15px;line-height:1.72;margin-bottom:14px}
+    .legal-section p:last-child{margin-bottom:0}
+    .legal-section ul{
+      margin:10px 0 14px;padding-left:0;list-style:none;
+      display:flex;flex-direction:column;gap:8px;
+    }
+    .legal-section ul li{
+      color:var(--cream2);font-size:15px;line-height:1.65;
+      padding-left:20px;position:relative;
+    }
+    .legal-section ul li::before{content:"–";position:absolute;left:0;color:var(--amber);font-weight:700}
+    .legal-section a{color:var(--amber)}
+    .section-number{
+      display:inline-block;font-size:11px;font-weight:900;
+      letter-spacing:.18em;text-transform:uppercase;
+      color:var(--muted);margin-bottom:10px;
+    }
+    .not-list li::before{content:"✕";color:rgba(200,136,10,.6)}
+    .caps-block{
+      background:rgba(240,232,216,.04);
+      border:1px solid var(--line);
+      border-left:3px solid var(--amber);
+      padding:20px 24px;
+      margin:16px 0;
+      color:var(--cream2);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .footer{padding:32px 0;border-top:1px solid var(--line);background:var(--deep)}
+    .footer-inner{
+      width:var(--container);margin:0 auto;
+      display:flex;justify-content:space-between;align-items:center;gap:20px;
+      color:rgba(240,232,216,.5);font-size:13px;font-weight:700;
+    }
+    .footer-links{display:flex;gap:20px}
+    .footer-links a{color:rgba(240,232,216,.5);transition:.2s}
+    .footer-links a:hover{color:var(--cream);text-decoration:none}
+
+    @media(max-width:600px){.footer-inner{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/purl">
+      <img src="/purl/assets/purl-icon.png" alt="Purl" />
+      <strong>Purl</strong>
+    </a>
+    <a class="back-link" href="/purl">Back to Purl</a>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <span class="page-kicker">Legal</span>
+    <h1 class="page-title">Terms of Use</h1>
+    <p class="page-meta">Last updated: June 18, 2026 &nbsp;·&nbsp; Qubi LLC</p>
+  </div>
+</div>
+
+<main class="legal-content">
+
+  <div class="legal-section">
+    <span class="section-number">01</span>
+    <h2>Acceptance of Terms</h2>
+    <p>By downloading, installing, or using Purl – Pattern Tracker ("App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+    <p>These Terms constitute a legally binding agreement between you and Qubi LLC ("we", "our", "us").</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">02</span>
+    <h2>License to Use the App</h2>
+    <p>Subject to your compliance with these Terms, Qubi LLC grants you a limited, non-exclusive, non-transferable, revocable license to download and install the App on Apple devices you own or control, and to use the App for your personal, non-commercial purposes.</p>
+    <h3>This license does not permit you to</h3>
+    <ul class="not-list">
+      <li>Copy, modify, or distribute the App</li>
+      <li>Reverse engineer or attempt to extract the source code</li>
+      <li>Use the App for any commercial purpose without written permission</li>
+      <li>Transfer your license to another person</li>
+      <li>Resell, sublicense, or rent the App</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">03</span>
+    <h2>Purchases and Payment</h2>
+
+    <h3>One-Time Purchase</h3>
+    <p>Purl offers full access through a one-time in-app purchase ("Purl Premium"). This is a perpetual license for your personal use — you pay once and own it forever.</p>
+
+    <h3>Free Trial</h3>
+    <p>The App may offer a limited free trial period. At the end of the trial, continued use of premium features requires purchase.</p>
+
+    <h3>Payments</h3>
+    <p>All purchases are processed by Apple through the App Store. We do not directly handle payment card information. Pricing is displayed in your local currency at the time of purchase.</p>
+
+    <h3>Refund Policy</h3>
+    <p>Refund requests are handled by Apple in accordance with their App Store refund policy. To request a refund, visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. We are unable to process refunds directly.</p>
+
+    <h3>Purchase Restoration</h3>
+    <p>If you reinstall the App or use it on a new device, you can restore your purchase via Settings → Restore Purchase, using the same Apple ID used for the original purchase.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">04</span>
+    <h2>User Content</h2>
+
+    <h3>Your Content</h3>
+    <p>The App allows you to import PDF patterns, upload progress photos, and create project notes ("Your Content"). You retain full ownership of Your Content.</p>
+
+    <h3>License to Us</h3>
+    <p>By storing Your Content in the App, you grant Qubi LLC a limited, non-exclusive license to store, display, and transmit Your Content solely as necessary to provide the App's services to you. We do not use your content for any other purpose.</p>
+
+    <h3>Your Responsibility</h3>
+    <p>You are solely responsible for Your Content. You represent that you have the right to use and import any PDF patterns you upload, your content does not infringe any third-party intellectual property rights, and your content complies with all applicable laws.</p>
+
+    <h3>Pattern Copyrights</h3>
+    <p>Cross-stitch patterns may be protected by copyright. By importing a PDF pattern into the App, you confirm that you have legally obtained the pattern and have the right to use it for personal stitching purposes. The App is a personal tracker tool and is not intended to enable copyright infringement.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">05</span>
+    <h2>Acceptable Use</h2>
+    <p>You agree NOT to use the App to:</p>
+    <ul class="not-list">
+      <li>Violate any applicable law or regulation</li>
+      <li>Upload content that infringes intellectual property rights</li>
+      <li>Attempt to gain unauthorised access to our systems</li>
+      <li>Interfere with or disrupt the App or its servers</li>
+      <li>Upload malicious files or harmful code</li>
+      <li>Use the App for any commercial distribution of others' patterns</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">06</span>
+    <h2>Intellectual Property</h2>
+    <p>All rights in and to the App — including but not limited to the software, design, graphics, user interface, logos, and trademarks — are owned by Qubi LLC or our licensors.</p>
+    <p>The "Purl" name and logo are trademarks of Qubi LLC. You may not use our trademarks without prior written consent.</p>
+    <p>The DMC thread colour catalog data referenced in the App is provided for personal use only. DMC is a registered trademark of DMC Corporation.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">07</span>
+    <h2>Disclaimer of Warranties</h2>
+    <div class="caps-block">
+      THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR ACCURACY OR RELIABILITY OF PATTERN ANALYSIS RESULTS.
+    </div>
+    <p>We do not warrant that the App will be error-free or uninterrupted, PDF pattern analysis will be 100% accurate for all patterns, or that the App will be compatible with all future iOS versions.</p>
+    <p>Pattern analysis features (grid detection, thread detection, symbol detection) use automated image processing and may not be accurate for all PDF formats. Results should be verified by the user.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">08</span>
+    <h2>Limitation of Liability</h2>
+    <div class="caps-block">
+      TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, QUBI LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES, LOSS OF DATA, PROFITS, OR GOODWILL, DAMAGES ARISING FROM RELIANCE ON PATTERN ANALYSIS RESULTS, OR ANY DAMAGES EXCEEDING THE AMOUNT YOU PAID FOR THE APP.
+    </div>
+    <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability, so some of the above may not apply to you.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">09</span>
+    <h2>Account and Data</h2>
+
+    <h3>Account Security</h3>
+    <p>You are responsible for maintaining the confidentiality of your account credentials. Notify us immediately at <a href="mailto:info@qubillc.com">info@qubillc.com</a> if you suspect unauthorised access to your account.</p>
+
+    <h3>Account Deletion</h3>
+    <p>You may delete your account at any time from Settings → Account → Delete Account. Deletion permanently removes all your data from our servers within 30 days.</p>
+
+    <h3>Data Backup</h3>
+    <p>While we maintain reliable cloud storage, you are responsible for keeping backups of any patterns or content important to you. We are not liable for data loss due to circumstances beyond our control.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">10</span>
+    <h2>Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to the App if you violate these Terms. Upon termination, your license to use the App is revoked and you must cease all use of the App. We may delete your account and data in accordance with our Privacy Policy.</p>
+    <p>Termination does not entitle you to a refund of any purchase.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">11</span>
+    <h2>Updates and Changes</h2>
+    <p>We may update the App at any time to add features, fix bugs, or improve performance. Some updates may be required to continue using the App. We do not guarantee that any specific feature will remain available in future versions.</p>
+    <p>We may modify these Terms at any time. We will notify you of material changes by updating the "Last updated" date. Continued use of the App after changes constitutes acceptance.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">12</span>
+    <h2>Governing Law</h2>
+    <p>These Terms are governed by the laws of the United States, without regard to conflict of law principles. Any disputes shall be resolved in the courts of competent jurisdiction.</p>
+    <p>For users in the European Union: nothing in these Terms affects your statutory rights as a consumer under EU law.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">13</span>
+    <h2>Apple App Store Additional Terms</h2>
+    <p>As required by Apple:</p>
+    <ul>
+      <li>These Terms are between you and Qubi LLC only, not Apple Inc.</li>
+      <li>Apple has no obligation to provide maintenance or support for the App</li>
+      <li>Apple is not responsible for any claims relating to the App</li>
+      <li>Apple is a third-party beneficiary of these Terms</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">14</span>
+    <h2>Contact</h2>
+    <p>Questions about these Terms? We're happy to help.</p>
+    <ul>
+      <li>Email: <a href="mailto:info@qubillc.com">info@qubillc.com</a></li>
+      <li>Support form: <a href="/purl/support">qubi.com/purl/support</a></li>
+    </ul>
+    <p>Please use the subject line <strong>"Purl Legal"</strong> for legal enquiries, or <strong>"Purl Support"</strong> for general support.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>Purl is made by Qubi LLC © 2026</span>
+    <div class="footer-links">
+      <a href="/purl/support">Support</a>
+      <a href="/purl/privacy">Privacy Policy</a>
+      <a href="/purl/terms">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

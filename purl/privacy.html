@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Purl Pattern Keeper</title>
+  <meta name="description" content="Privacy Policy for Purl – Pattern Keeper. Learn how Qubi LLC collects, uses and protects your data." />
+  <link rel="canonical" href="https://qubi.com/purl/privacy" />
+  <meta name="robots" content="index, follow" />
+  <link rel="apple-touch-icon" href="/purl/assets/purl-icon.png" />
+  <meta name="theme-color" content="#0c1a10" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#0c1a10;
+      --deep:#07110a;
+      --surface:#142019;
+      --cream:#f0e8d8;
+      --cream2:rgba(240,232,216,.72);
+      --amber:#c8880a;
+      --muted:#7a9280;
+      --line:rgba(240,232,216,.1);
+      --serif:"Playfair Display",Georgia,serif;
+      --body:"DM Sans",system-ui,sans-serif;
+      --container:min(100% - 52px,780px);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{background:var(--bg)}
+    body{
+      font-family:var(--body);
+      color:var(--cream);
+      background:var(--bg);
+      min-height:100vh;
+    }
+    a{color:var(--amber);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Nav */
+    .nav{
+      position:sticky;top:0;z-index:50;
+      padding:20px 0;
+      background:rgba(12,26,16,.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      width:var(--container);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream)}
+    .brand img{width:36px;height:36px;border-radius:10px}
+    .brand strong{font-family:var(--serif);font-size:22px;letter-spacing:-.04em}
+    .back-link{
+      font-size:13px;font-weight:800;color:var(--muted);
+      display:inline-flex;align-items:center;gap:8px;
+      transition:color .2s;
+    }
+    .back-link:hover{color:var(--cream);text-decoration:none}
+    .back-link::before{content:"←"}
+
+    /* Page header */
+    .page-header{
+      padding:64px 0 48px;
+      border-bottom:1px solid var(--line);
+    }
+    .page-header-inner{width:var(--container);margin:0 auto}
+    .page-kicker{
+      font-size:11px;font-weight:900;letter-spacing:.22em;
+      text-transform:uppercase;color:var(--amber);
+      display:block;margin-bottom:16px;
+    }
+    .page-title{
+      font-family:var(--serif);
+      font-size:clamp(36px,5vw,56px);
+      font-style:italic;
+      line-height:.92;
+      letter-spacing:-.04em;
+    }
+    .page-meta{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:700;
+    }
+
+    /* Content */
+    .legal-content{
+      width:var(--container);
+      margin:0 auto;
+      padding:56px 0 100px;
+    }
+    .legal-section{
+      margin-bottom:52px;
+      padding-bottom:52px;
+      border-bottom:1px solid var(--line);
+    }
+    .legal-section:last-child{border-bottom:none;margin-bottom:0}
+    .legal-section h2{
+      font-family:var(--serif);
+      font-size:clamp(20px,2vw,26px);
+      font-style:italic;
+      letter-spacing:-.03em;
+      margin-bottom:18px;
+      color:var(--cream);
+    }
+    .legal-section h3{
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--amber);
+      margin:24px 0 10px;
+    }
+    .legal-section p{
+      color:var(--cream2);
+      font-size:15px;
+      line-height:1.72;
+      margin-bottom:14px;
+    }
+    .legal-section p:last-child{margin-bottom:0}
+    .legal-section ul{
+      margin:10px 0 14px 0;
+      padding-left:0;
+      list-style:none;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .legal-section ul li{
+      color:var(--cream2);
+      font-size:15px;
+      line-height:1.65;
+      padding-left:20px;
+      position:relative;
+    }
+    .legal-section ul li::before{
+      content:"–";
+      position:absolute;left:0;
+      color:var(--amber);
+      font-weight:700;
+    }
+    .legal-section a{color:var(--amber)}
+    .section-number{
+      display:inline-block;
+      font-size:11px;font-weight:900;letter-spacing:.18em;
+      text-transform:uppercase;color:var(--muted);
+      margin-bottom:10px;
+    }
+    .do-not-list li::before{content:"✕";color:rgba(200,136,10,.6)}
+
+    /* Footer */
+    .footer{
+      padding:32px 0;
+      border-top:1px solid var(--line);
+      background:var(--deep);
+    }
+    .footer-inner{
+      width:var(--container);
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      color:rgba(240,232,216,.5);
+      font-size:13px;
+      font-weight:700;
+    }
+    .footer-links{display:flex;gap:20px}
+    .footer-links a{color:rgba(240,232,216,.5);transition:.2s}
+    .footer-links a:hover{color:var(--cream);text-decoration:none}
+
+    @media(max-width:600px){
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/purl">
+      <img src="/purl/assets/purl-icon.png" alt="Purl" />
+      <strong>Purl</strong>
+    </a>
+    <a class="back-link" href="/purl">Back to Purl</a>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <span class="page-kicker">Legal</span>
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-meta">Last updated: June 18, 2026 &nbsp;·&nbsp; Qubi LLC</p>
+  </div>
+</div>
+
+<main class="legal-content">
+
+  <div class="legal-section">
+    <span class="section-number">01</span>
+    <h2>Overview</h2>
+    <p>Purl – Pattern Tracker ("App") is developed and operated by Qubi LLC. We are committed to protecting your privacy. This Privacy Policy explains what data we collect, how we use it, and your rights.</p>
+    <p>By using the App, you agree to the collection and use of information described in this policy.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">02</span>
+    <h2>Information We Collect</h2>
+
+    <h3>Account Information</h3>
+    <ul>
+      <li>Email address (when you sign in with email/password)</li>
+      <li>Authentication tokens (managed securely by Firebase Auth)</li>
+      <li>We do not collect your name, phone number, or payment card details</li>
+    </ul>
+
+    <h3>Content You Create</h3>
+    <ul>
+      <li>Cross-stitch, knitting, and crochet project data (title, notes, stitch progress, completion status)</li>
+      <li>PDF pattern files you import (stored encrypted in Firebase Storage under your account)</li>
+      <li>Progress photos you upload within the App</li>
+      <li>Thread/colour key configurations</li>
+    </ul>
+
+    <h3>Purchase Information</h3>
+    <ul>
+      <li>Whether you have purchased the app (stored as a boolean flag locally on your device)</li>
+      <li>Purchase verification is performed via RevenueCat. RevenueCat may collect transaction identifiers for receipt validation. We do not store your Apple ID or payment details.</li>
+      <li>See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a></li>
+    </ul>
+
+    <h3>Usage Data (Automatically Collected)</h3>
+    <ul>
+      <li>Crash reports and error logs (via Firebase Crashlytics, if enabled)</li>
+      <li>Basic app diagnostics (device type, iOS version, app version)</li>
+      <li>We do NOT track individual user behaviour, screen flows, or analytics beyond what is necessary to keep the App functioning</li>
+    </ul>
+
+    <h3>Device Permissions</h3>
+    <ul>
+      <li>Camera / Photo Library: only accessed when you explicitly add a progress photo</li>
+      <li>Notifications: only if you enable stitch reminders in Settings</li>
+      <li>Local Storage: PDF patterns and app preferences are cached locally for offline access</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">03</span>
+    <h2>How We Use Your Information</h2>
+    <p>We use your information solely to:</p>
+    <ul>
+      <li>Provide and sync your cross-stitch, knitting and crochet projects across your devices</li>
+      <li>Restore your purchase and verify your subscription entitlements</li>
+      <li>Deliver stitch reminder notifications you have opted into</li>
+      <li>Improve app stability through crash reports</li>
+      <li>Respond to your support requests</li>
+    </ul>
+    <h3>We Do Not</h3>
+    <ul class="do-not-list">
+      <li>Sell your data to third parties</li>
+      <li>Use your data for advertising</li>
+      <li>Share your project content, photos, or PDF patterns with anyone</li>
+      <li>Build advertising profiles from your usage</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">04</span>
+    <h2>Data Storage and Security</h2>
+    <p>Your data is stored using Google Firebase (Google LLC), which provides industry-standard encryption in transit (TLS) and at rest. Firebase servers are located in the United States.</p>
+    <p>Access to your data is restricted by Firebase Security Rules — only you (authenticated with your account) can read or write your own projects, photos, and PDF files. Purl staff cannot access your content without your explicit consent.</p>
+    <p>We retain your data for as long as your account is active. If you delete your account within the App, all your data is permanently deleted within 30 days.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">05</span>
+    <h2>Third-Party Services</h2>
+
+    <h3>Firebase (Google LLC)</h3>
+    <p>Authentication, Database (Firestore), File Storage, Crash Reporting. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy →</a></p>
+
+    <h3>RevenueCat Inc.</h3>
+    <p>In-app purchase management and receipt validation. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy Policy →</a></p>
+
+    <h3>Apple Inc.</h3>
+    <p>App Store distribution, StoreKit in-app purchases. <a href="https://www.apple.com/privacy" target="_blank" rel="noopener">Privacy Policy →</a></p>
+
+    <p>None of these services receive your pattern content, photos, or PDF files other than as needed to provide their core infrastructure functions.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">06</span>
+    <h2>Children's Privacy</h2>
+    <p>The App is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe your child has provided us with personal information, please <a href="/purl/support">contact us</a> and we will delete it promptly.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">07</span>
+    <h2>Your Rights</h2>
+    <p>Depending on your location, you may have the following rights:</p>
+    <ul>
+      <li><strong>Access</strong> — Request a copy of the data we hold about you</li>
+      <li><strong>Correction</strong> — Request correction of inaccurate data</li>
+      <li><strong>Deletion</strong> — Delete your account and all associated data from within the App (Settings → Account → Delete Account), or by contacting us</li>
+      <li><strong>Portability</strong> — Request an export of your project data</li>
+      <li><strong>Objection</strong> — Object to certain processing of your data</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:info@qubillc.com">info@qubillc.com</a> with the subject line "Purl Privacy Request".</p>
+    <p>For EEA/UK users: if you believe we have not addressed your concern, you have the right to lodge a complaint with your local data protection authority.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">08</span>
+    <h2>California Privacy Rights (CCPA)</h2>
+    <p>California residents have the right to know what personal information is collected and how it is used, request deletion of personal information, and opt out of the sale of personal information.</p>
+    <p>We do not sell personal information. To exercise your rights, contact us at <a href="mailto:info@qubillc.com">info@qubillc.com</a>.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">09</span>
+    <h2>Data Transfers</h2>
+    <p>Your data may be transferred to and processed in the United States where our third-party service providers (Firebase, RevenueCat) operate. By using the App, you consent to this transfer. We ensure appropriate safeguards are in place through the use of services that comply with GDPR Standard Contractual Clauses where applicable.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">10</span>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by updating the "Last updated" date at the top of this policy. Your continued use of the App after any changes indicates your acceptance of the updated policy.</p>
+  </div>
+
+  <div class="legal-section">
+    <span class="section-number">11</span>
+    <h2>Contact</h2>
+    <p>Questions about this Privacy Policy? We're happy to help.</p>
+    <ul>
+      <li>Email: <a href="mailto:info@qubillc.com">info@qubillc.com</a></li>
+      <li>Support form: <a href="/purl/support">qubi.com/purl/support</a></li>
+    </ul>
+    <p>Please use the subject line <strong>"Purl Privacy Request"</strong> for privacy-related enquiries.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>Purl is made by Qubi LLC © 2026</span>
+    <div class="footer-links">
+      <a href="/purl/support">Support</a>
+      <a href="/purl/privacy">Privacy Policy</a>
+      <a href="/purl/terms">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

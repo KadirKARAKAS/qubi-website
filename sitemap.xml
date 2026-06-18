@@ -16,6 +16,21 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://qubi.com/purl/support</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://qubi.com/purl/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qubi.com/purl/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://qubi.com/wondertale</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

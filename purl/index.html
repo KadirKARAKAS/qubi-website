@@ -1075,6 +1075,9 @@
       font-size:13px;
       font-weight:700;
     }
+    .footer-links{display:flex;gap:20px}
+    .footer-links a{color:rgba(240,232,216,.55);transition:color .2s}
+    .footer-links a:hover{color:var(--cream)}
 
     /* ── Value Props ── */
     .value-props{
@@ -1663,7 +1666,11 @@
   <footer class="footer">
     <div class="footer-inner">
       <span>Purl is made by Qubi LLC © 2026</span>
-      <a href="/purl/privacy">Privacy Policy</a>
+      <div class="footer-links">
+        <a href="/purl/support">Support</a>
+        <a href="/purl/privacy">Privacy Policy</a>
+        <a href="/purl/terms">Terms of Use</a>
+      </div>
     </div>
   </footer>
 

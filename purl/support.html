@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support – Purl Pattern Keeper</title>
+  <meta name="description" content="Get help with Purl – Pattern Keeper. Contact Qubi LLC for support, bug reports, or feature requests." />
+  <link rel="canonical" href="https://qubi.com/purl/support" />
+  <meta name="robots" content="index, follow" />
+  <link rel="apple-touch-icon" href="/purl/assets/purl-icon.png" />
+  <meta name="theme-color" content="#0c1a10" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#0c1a10;
+      --deep:#07110a;
+      --surface:#142019;
+      --surface2:#19291f;
+      --cream:#f0e8d8;
+      --cream2:rgba(240,232,216,.72);
+      --amber:#c8880a;
+      --muted:#7a9280;
+      --line:rgba(240,232,216,.1);
+      --serif:"Playfair Display",Georgia,serif;
+      --body:"DM Sans",system-ui,sans-serif;
+      --container:min(100% - 52px,1080px);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{background:var(--bg)}
+    body{font-family:var(--body);color:var(--cream);background:var(--bg);min-height:100vh}
+    a{color:var(--amber);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Nav */
+    .nav{
+      position:sticky;top:0;z-index:50;
+      padding:20px 0;
+      background:rgba(12,26,16,.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      width:var(--container);margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream)}
+    .brand img{width:36px;height:36px;border-radius:10px}
+    .brand strong{font-family:var(--serif);font-size:22px;letter-spacing:-.04em}
+    .back-link{
+      font-size:13px;font-weight:800;color:var(--muted);
+      display:inline-flex;align-items:center;gap:8px;transition:color .2s;
+    }
+    .back-link:hover{color:var(--cream);text-decoration:none}
+    .back-link::before{content:"←"}
+
+    /* Page header */
+    .page-header{padding:64px 0 48px;border-bottom:1px solid var(--line)}
+    .page-header-inner{width:var(--container);margin:0 auto}
+    .page-kicker{
+      font-size:11px;font-weight:900;letter-spacing:.22em;
+      text-transform:uppercase;color:var(--amber);
+      display:block;margin-bottom:16px;
+    }
+    .page-title{
+      font-family:var(--serif);
+      font-size:clamp(36px,5vw,64px);
+      font-style:italic;line-height:.92;letter-spacing:-.04em;
+    }
+    .page-subtitle{
+      margin-top:18px;color:var(--cream2);
+      font-size:clamp(16px,1.4vw,19px);
+      line-height:1.55;max-width:560px;
+    }
+
+    /* Main grid */
+    .support-grid{
+      width:var(--container);
+      margin:0 auto;
+      padding:64px 0 100px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:64px;
+      align-items:start;
+    }
+
+    /* Form */
+    .form-card{
+      background:var(--surface);
+      border:1px solid rgba(240,232,216,.08);
+      padding:44px 42px;
+    }
+    .form-card h2{
+      font-family:var(--serif);
+      font-size:clamp(26px,2.4vw,34px);
+      font-style:italic;letter-spacing:-.04em;
+      margin-bottom:30px;
+    }
+
+    .field{margin-bottom:22px}
+    .field label{
+      display:block;
+      font-size:12px;font-weight:900;letter-spacing:.14em;
+      text-transform:uppercase;color:var(--muted);
+      margin-bottom:8px;
+    }
+    .field input,
+    .field select,
+    .field textarea{
+      width:100%;
+      background:rgba(240,232,216,.05);
+      border:1px solid rgba(240,232,216,.12);
+      color:var(--cream);
+      font-family:var(--body);
+      font-size:15px;
+      padding:13px 16px;
+      border-radius:0;
+      outline:none;
+      transition:border-color .2s;
+      -webkit-appearance:none;
+    }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{
+      border-color:var(--amber);
+    }
+    .field textarea{
+      min-height:140px;
+      resize:vertical;
+      line-height:1.6;
+    }
+    .field select{
+      cursor:pointer;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237a9280' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 16px center;
+      padding-right:40px;
+    }
+    .field select option{background:#142019;color:var(--cream)}
+
+    .submit-btn{
+      width:100%;
+      padding:16px 24px;
+      background:var(--cream);
+      color:#07110a;
+      font-family:var(--body);
+      font-size:15px;
+      font-weight:900;
+      border:none;
+      cursor:pointer;
+      letter-spacing:.04em;
+      transition:opacity .2s, transform .15s;
+      position:relative;
+      overflow:hidden;
+    }
+    .submit-btn::before{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(110deg,transparent,rgba(255,255,255,.3),transparent);
+      transform:translateX(-130%);
+      transition:transform .55s ease;
+    }
+    .submit-btn:hover::before{transform:translateX(130%)}
+    .submit-btn:hover{opacity:.92}
+    .submit-btn:active{transform:scale(.98)}
+
+    /* Alerts */
+    .alert{
+      padding:14px 18px;
+      margin-bottom:22px;
+      font-size:14px;
+      font-weight:700;
+      border-left:3px solid;
+    }
+    .alert-success{
+      background:rgba(122,146,128,.12);
+      border-color:var(--muted);
+      color:var(--cream2);
+    }
+    .alert-error{
+      background:rgba(200,80,80,.1);
+      border-color:#c85050;
+      color:rgba(240,180,180,.9);
+    }
+
+    /* Sidebar */
+    .sidebar{display:flex;flex-direction:column;gap:28px}
+
+    .info-card{
+      background:var(--surface);
+      border:1px solid rgba(240,232,216,.08);
+      padding:34px 30px;
+    }
+    .info-card h3{
+      font-family:var(--serif);
+      font-size:clamp(18px,1.6vw,22px);
+      font-style:italic;letter-spacing:-.03em;
+      margin-bottom:14px;
+    }
+    .info-card p{
+      color:var(--cream2);font-size:14px;line-height:1.68;
+      margin-bottom:12px;
+    }
+    .info-card p:last-child{margin-bottom:0}
+    .info-card ul{
+      list-style:none;padding:0;
+      display:flex;flex-direction:column;gap:10px;
+      margin-top:14px;
+    }
+    .info-card ul li{
+      font-size:14px;color:var(--cream2);
+      line-height:1.55;padding-left:16px;position:relative;
+    }
+    .info-card ul li::before{
+      content:"→";position:absolute;left:0;
+      color:var(--amber);font-size:12px;
+    }
+    .response-badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:9px 14px;
+      background:rgba(200,136,10,.1);
+      border:1px solid rgba(200,136,10,.2);
+      font-size:12px;font-weight:900;color:var(--amber);
+      letter-spacing:.06em;
+      margin-top:16px;
+    }
+    .response-badge::before{
+      content:"";width:6px;height:6px;border-radius:50%;
+      background:var(--amber);
+    }
+
+    /* Footer */
+    .footer{padding:32px 0;border-top:1px solid var(--line);background:var(--deep)}
+    .footer-inner{
+      width:var(--container);margin:0 auto;
+      display:flex;justify-content:space-between;align-items:center;gap:20px;
+      color:rgba(240,232,216,.5);font-size:13px;font-weight:700;
+    }
+    .footer-links{display:flex;gap:20px}
+    .footer-links a{color:rgba(240,232,216,.5);transition:.2s}
+    .footer-links a:hover{color:var(--cream);text-decoration:none}
+
+    @media(max-width:860px){
+      .support-grid{grid-template-columns:1fr;gap:40px}
+      .form-card{padding:34px 28px}
+    }
+    @media(max-width:600px){
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/purl">
+      <img src="/purl/assets/purl-icon.png" alt="Purl" />
+      <strong>Purl</strong>
+    </a>
+    <a class="back-link" href="/purl">Back to Purl</a>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <span class="page-kicker">Help & Support</span>
+    <h1 class="page-title">We're here<br>to help.</h1>
+    <p class="page-subtitle">Fill in the form and we'll get back to you as soon as possible. For urgent matters you can also email us directly.</p>
+  </div>
+</div>
+
+<div class="support-grid">
+
+  <!-- Contact Form -->
+  <div class="form-card">
+    <h2>Send us a message</h2>
+
+    <?php if (isset($_GET['sent']) && $_GET['sent'] == '1'): ?>
+    <div class="alert alert-success">
+      ✓ Message sent. We'll get back to you within 24–48 hours.
+    </div>
+    <?php elseif (isset($_GET['error'])): ?>
+    <div class="alert alert-error">
+      Something went wrong. Please try again or email us directly at info@qubillc.com
+    </div>
+    <?php endif; ?>
+
+    <form action="/purl/contact.php" method="POST">
+      <div class="field">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label for="subject">Topic</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>Select a topic…</option>
+          <option value="General Question">General Question</option>
+          <option value="Bug Report">Bug Report</option>
+          <option value="Feature Request">Feature Request</option>
+          <option value="Purchase & Billing">Purchase &amp; Billing</option>
+          <option value="Privacy / Data Request">Privacy / Data Request</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Describe your issue or question in as much detail as possible…" required></textarea>
+      </div>
+
+      <!-- Honeypot — do not fill -->
+      <div style="display:none" aria-hidden="true">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <div class="info-card">
+      <h3>Response time</h3>
+      <p>We read every message and aim to respond to all enquiries promptly.</p>
+      <div class="response-badge">Typically within 24–48 hours</div>
+    </div>
+
+    <div class="info-card">
+      <h3>Before you write</h3>
+      <p>Your question may already be answered in our FAQ.</p>
+      <ul>
+        <li><a href="/purl#faq">Which crafts does Purl support?</a></li>
+        <li><a href="/purl#faq">How does cloud sync work?</a></li>
+        <li><a href="/purl#faq">Is there a subscription fee?</a></li>
+        <li><a href="/purl#faq">How do I restore my purchase?</a></li>
+        <li><a href="/purl#faq">Can I import from Google Drive?</a></li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>Contact directly</h3>
+      <p>Prefer email? Reach us at:</p>
+      <p><a href="mailto:info@qubillc.com">info@qubillc.com</a></p>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted)">
+        Use subject line <strong style="color:var(--cream2)">"Purl Support"</strong> for general help,
+        or <strong style="color:var(--cream2)">"Purl Privacy Request"</strong> for data-related enquiries.
+      </p>
+    </div>
+
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>Purl is made by Qubi LLC © 2026</span>
+    <div class="footer-links">
+      <a href="/purl/support">Support</a>
+      <a href="/purl/privacy">Privacy Policy</a>
+      <a href="/purl/terms">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
