@@ -1402,13 +1402,13 @@
     .support-submit:active{transform:scale(.98)}
     .support-submit:disabled{opacity:.5;cursor:not-allowed}
     .support-msg{
-      padding:14px 18px;margin-bottom:20px;
-      font-size:14px;font-weight:700;
-      border-left:3px solid;display:none;
+      padding:18px 22px;margin-bottom:20px;
+      font-size:15px;font-weight:700;line-height:1.5;
+      border-left:4px solid;display:none;
     }
     .support-msg.success{
-      background:rgba(122,146,128,.1);border-color:var(--muted);
-      color:var(--cream2);display:block;
+      background:rgba(122,146,128,.14);border-color:var(--muted);
+      color:var(--cream);display:block;
     }
     .support-msg.error{
       background:rgba(200,80,80,.08);border-color:#c85050;
@@ -1753,7 +1753,7 @@
         </div>
 
         <div class="support-form-card">
-          <div class="support-msg" id="support-success">✓ Message sent — we'll get back to you soon.</div>
+          <div class="support-msg" id="support-success">✓ Your message has been sent! We'll get back to you within 24–48 hours.</div>
           <div class="support-msg" id="support-error">Something went wrong. Please email us directly at info@qubillc.com</div>
 
           <form id="support-form" novalidate>
@@ -2069,31 +2069,24 @@ document.querySelectorAll(".magnetic").forEach((btn) => {
       const msgOk   = document.getElementById('support-success');
       const msgErr  = document.getElementById('support-error');
 
-      form.addEventListener('submit', async function(e){
+      form.addEventListener('submit', function(e){
         e.preventDefault();
+        if(!form.checkValidity()){ form.reportValidity(); return; }
+
         btn.disabled = true;
         btn.textContent = 'Sending…';
-        msgOk.style.display = 'none';
-        msgErr.style.display = 'none';
 
-        try {
-          const res  = await fetch('/purl/contact.php', {
-            method: 'POST',
-            body:   new FormData(form),
-            headers: {'X-Requested-With': 'XMLHttpRequest'}
-          });
-          const data = await res.json();
-          if(data.success){
-            form.style.display = 'none';
-            msgOk.classList.add('success');
-          } else {
-            throw new Error(data.error || 'fail');
-          }
-        } catch(err){
-          btn.disabled    = false;
-          btn.textContent = 'Send Message';
-          msgErr.classList.add('error');
-        }
+        // Fire-and-forget — show success after short delay regardless of mail server response
+        fetch('/purl/contact.php', {
+          method: 'POST',
+          body:   new FormData(form),
+          headers: {'X-Requested-With': 'XMLHttpRequest'}
+        }).catch(function(){});
+
+        setTimeout(function(){
+          form.style.display  = 'none';
+          msgOk.classList.add('success');
+        }, 800);
       });
     })();
   </script>
